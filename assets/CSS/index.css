@@ -1,0 +1,559 @@
+body{
+    margin: 0;
+    line-height: 1.5;
+    background-color: black;
+}
+
+body,input,textarea,button{
+    font-family:'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.invertColor{
+    filter: invert(1);
+}
+
+@keyframes homeSqrAni{
+    0%{
+        transform: rotateZ(0deg);
+        border: 2px solid rgb(250, 162, 0);
+    }
+    50%{
+        transform: rotateZ(180deg);
+        border: 2px solid rgb(200, 255, 0);
+    }
+    75%{
+        transform: rotateZ(270deg);
+        border-radius: 0%;
+        border: 2px solid rgb(233, 1, 1);
+    }
+    100%{
+        transform: rotateZ(360deg);
+        border: 2px solid rgb(250, 162, 0);
+    }
+}
+/*header*/
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header .brandName{
+    padding: 0 15px;
+}
+
+.header .brandName a{
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(241, 241, 241);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+}
+
+.header .brandName a:hover{
+    color: rgb(255, 255, 255);
+    letter-spacing: 4px;
+    color: rgb(250, 162, 0);
+}
+
+.header .nav{
+    padding: 0 15px;
+}
+
+.header .nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header .nav ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header .nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 25px 0px;
+    display: block;
+    transition: all .5s ease;
+}
+
+.header .nav ul li a:hover{
+    letter-spacing: 3px;
+    color: rgb(250, 162, 0);
+}
+
+/*homeSection*/
+.homeSection{
+    min-height: 100vh;
+    background-image:url('../images/HomeSec2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.homeSection:before{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.homeSection .shape01{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 2px solid rgb(250, 162, 0);
+    right: 8%;
+    top: 20%;
+    animation:homeSqrAni 3s linear infinite ;
+}
+
+.homeSection .row{
+    min-height: 100vh;
+}
+
+.homeSection .homeContent{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.homeSection .homeContent h4{
+    font-size: 30px;
+    color: white;
+    margin: 0;
+}
+
+.homeSection .homeContent h1{
+    font-size: 55px;
+    color: white;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+
+.homeSection .scrollDown{
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    height: 30px;
+    width: 30px;
+    margin-left: -10px;
+    animation: scrollDown 2s ease infinite;
+}
+
+@keyframes scrollDown{
+    0%,20%,50%,80%,100%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    60%{
+        transform: translateY(-15px);
+    }
+}
+
+.homeSection .scrollDown img{
+    width: 25px;
+    display: block;
+    filter: invert(1);
+    margin: 2px auto;
+}
+
+/* aboutSection */
+
+.aboutSection{
+    padding: 80px 0px 0px 0px;
+}
+.aboutSection .aboutImg .imgBox{
+    background-image: url('../images/Profile.jpg');
+    position: relative;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+.aboutSection .aboutImg .imgBox .shape02{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(250, 162, 0);
+    left: -20px;
+    top: -20px;
+    animation:homeSqrAni 3s linear infinite ;
+}
+
+.aboutSection .aboutContent{
+    border-top: 2px solid rgb(250, 162, 0);
+    border-left: 2px solid rgb(250, 162, 0);
+    padding: 15px 0px 0px 15px;
+}
+.aboutTitle{
+    max-width: 100%;
+}
+.aboutTitle h2{
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(250, 162, 0);
+    border-right: 2px solid rgb(250, 162, 0);
+    padding: 0px 10px 10px 0px;
+    margin: 0;
+}
+
+.aboutSection .aboutContent .aboutTitle, .aboutSection .aboutContent p{
+    color: white;
+}
+.aboutSection .aboutContent p{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.aboutSection .aboutContent p a{
+    color:rgb(250, 162, 0);
+}
+.aboutSection .states{
+    padding: 0px 15px;
+    width: 100%;
+}
+.aboutSection .states .stateBox{
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    color: white;
+    border: 2px solid rgb(250, 162, 0);
+    border-radius: 200px;
+    margin-bottom: 5px;
+    transition: .5s;
+}
+.aboutSection .states .stateBox h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0px;
+}
+.aboutSection .states .stateBox:hover{
+    display: flex;
+    flex-flow:column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 162, 0);
+    height: 100px;
+    width: 100px;
+    color: white;
+    border: 2px solid rgb(250, 162, 0);
+    border-radius: 200px;
+    cursor: pointer;
+}
+
+/* servicesSection */
+.servicesSection{
+    padding: 80px 0px 0px 0px;
+}
+.servicesTitle{
+    max-width: 100%;
+    margin-bottom: 25px;
+    color: white;
+}
+.servicesTitle h2{
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(250, 162, 0);
+    border-right: 2px solid rgb(250, 162, 0);
+    padding: 0px 10px 10px 0px;
+    margin: 0;
+}
+
+.servicesSection .serviceItem{
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.servicesSection .serviceItemInner{
+    position: relative;
+    overflow: hidden;
+}
+.servicesSection .serviceItemInner:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.servicesSection .serviceItemInner img{
+    height: 100%; width: 100%;
+    display: block;
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+.servicesSection .serviceItemInner .overlay{
+    height: 100%;width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(256,256,256,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+}
+.servicesSection .serviceItemInner:hover .overlay{
+    left:100%;
+    top:100%;
+    border-radius: 100%;
+}
+.servicesSection .serviceItemInner .overlay h4{
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    margin:0;
+    text-align: center;
+    transition: all .5s ease;
+}
+.servicesSection .servicesContent{
+    border-top: 2px solid rgb(250, 162, 0);
+    border-left: 2px solid rgb(250, 162, 0);
+}
+
+/* Resume Section */
+.resumeSection{
+    padding: 80px 0px 0px 0px;
+}
+.resumeSection .resumeTitle h4{
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(250, 162, 0);
+    border-right: 2px solid rgb(250, 162, 0);
+    padding: 0px 10px 10px 0px;
+    margin: 0;
+}
+
+.resumeSection .careerHistory .leftCareerHistory{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0;
+    color: white;
+}
+.resumeSection .careerHistory .leftCareerHistory h5{
+    font-weight: 700;
+    text-align: center;
+}
+/* .resumeSection .careerHistory .leftCareerHistory .leftListIcon{
+    width: 20px; height: 20px;
+    position: absolute;
+    left: -30px;
+    top: 5px;
+} */
+.resumeSection .careerHistory .leftCareerHistory img{
+    width: 50px; height: auto;
+}
+.resumeSection .careerHistory .leftCareerHistory:nth-last-child(2) img{
+    width: 100px; height: auto;
+}
+.resumeSection .careerHistory .leftCareerHistory span{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.resumeSection .careerHistory .rightCareerHistory{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 0;
+    color: white;
+    padding-left: 30px;
+    border-left:2px solid rgb(250, 162, 0);
+}
+.resumeSection .careerHistory .rightCareerHistory .timelineDot{
+    position: absolute;
+    width: 20px;
+    top: 40%;
+    left: -10.5px;
+}
+.resumeSection .careerHistory .rightCareerHistory h4{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.skillChart .skillChartTitle h2{
+    color: white;
+    display: inline-block;
+    border-top: 2px solid rgb(250, 162, 0);    
+    border-left: 2px solid rgb(250, 162, 0);
+}
+.skillChart .skillNameValue{
+    color: white;
+    font-weight: 800;
+}
+.skillChart .skillNameValue p{
+    font-size: 20px;
+}
+.skillChart .skillNameValue p , h4{
+    margin: 0;
+}
+.skillChart .skillProgressOuter{
+    border: 3px solid rgb(250, 162, 0);
+    background-color: rgb(250, 162, 0) ;
+    border-radius: 1000px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.skillChart .skillProgressOuter .skillProgressInner{
+    background-color: black;
+    height: 12px;
+    border-radius: 1000px;
+}
+/* CONTACT SECTION */
+.contactSection{
+    padding: 80px 0px 0px 0px;
+}
+.contactSection .contactTitle {
+}
+.contactSection .contactTitle h3{
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(250, 162, 0);
+    border-right: 2px solid rgb(250, 162, 0);
+    padding: 0px 10px 10px 0px;
+    margin: 0;
+}
+.contactSection .contactImg{
+    padding: 0px 15px;
+    position: relative;
+}
+.contactSection .contactImg .imgBox{
+    background-image: url('../images/contact4.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0px;
+}
+
+.contactSection .contactForm{
+    padding: 0px 65px;
+}
+.contactSection .contactForm .form{
+    background-color: white;
+    box-shadow: 0px 0px 20px white;
+    padding: 55px 40px 20px 40px;
+    margin-top: -150px;
+}
+.contactSection .contactForm .form textarea{
+    height: 100px;
+    resize: none;
+}
+.contactSection .contactForm .form .inputGroup input,textarea{
+    width: 100%;
+    border: 0px solid red;
+    border-bottom:2px solid black;
+    transition: .5s;
+}
+.contactSection .contactForm .form .inputGroup input:focus{
+    outline: none;
+    border: 0px solid black;
+    border-bottom: 2px solid rgb(250, 162, 0);
+}
+.contactSection .contactForm .form textarea:focus{
+    outline: none;
+    border: 0px solid black;
+    border-bottom: 2px solid rgb(250, 162, 0);
+}
+.contactSection .contactForm .form .formBtn .btn{
+    background-color: rgb(250, 162, 0);
+    font-weight: 800;
+    width: 100px;
+}
+.contactSection .contactForm .form .formBtn .btn:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
+.contactSection .contactForm .form .formBtn .btn:active{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.contactSection .contactInfo{
+    background-color: black;
+}
+.contactSection .contactInfo img{
+    width: 50px;
+}
+.contactSection .contactInfo p,a{
+    text-decoration: none;
+    color: white;
+}
+.contactPhone:hover a , .contactEmail:hover a{
+    letter-spacing: 4px;
+    transition: .5s;
+}
+.contactAdress:hover p{
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 400px){
+    .homeSection .homeContent h1{
+        font-size: 35px;
+    }
+    .aboutSection .aboutImg .imgBox{
+        height: 288px;
+        border-radius: 100%;
+    }
+    .resumeSection .resumeTitle h4{
+        font-size: 25px;
+    }
+    .resumeSection .careerHistory {
+        padding-right: 0px;
+    }
+    .resumeSection .careerHistory .leftCareerHistory h5{
+        font-size: 15px;
+    }
+    .resumeSection .careerHistory .leftCareerHistory:nth-last-child(2) img{
+        transform: rotateZ(90deg); height: 100px;
+    }
+    .resumeSection .careerHistory .rightCareerHistory{
+        padding-left: 15px;
+    }
+    .resumeSection .careerHistory .rightCareerHistory h4{
+        font-size: 20px;
+    }
+    .resumeSection .careerHistory .rightCareerHistory .timelineDot{
+        top:20%;
+    }
+    .servicesSection .serviceItemInner img{
+        filter: grayscale(0);
+    }
+}
