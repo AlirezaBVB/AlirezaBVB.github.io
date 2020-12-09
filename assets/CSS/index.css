@@ -43,8 +43,12 @@ body,input,textarea,button{
     top: 0;
     width: 100%;
     z-index: 99;
+    transition: 0.5s ease;
 }
-
+.header .fixed{
+    background-color: black;
+    position: fixed;
+}
 .header .brandName{
     padding: 0 15px;
 }
