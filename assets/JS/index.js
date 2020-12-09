@@ -1,3 +1,14 @@
+//FIXED HEADER
+$(document).ready(function(){
+  $(window).scroll(function(){
+    if($(this).scrollTop()>100){
+      $(".header").addClass("fixed");
+    }
+    else {
+      $(".header").removeClass("fixed");
+    }
+  })
+})
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
