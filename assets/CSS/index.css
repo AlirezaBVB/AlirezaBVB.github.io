@@ -69,6 +69,27 @@ body,input,textarea,button{
     color: rgb(250, 162, 0);
 }
 
+.header .navToggle{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.header .navToggle:focus{
+    outline: none;
+}
+.header .navToggle span{
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: white;
+    margin-top:2px ;
+}
+
 .header .nav{
     padding: 0 15px;
 }
@@ -528,6 +549,11 @@ body,input,textarea,button{
 }
 
 /* MEDIA QUERY */
+@media only screen and (max-width: 700px){
+    .navToggle{
+        display: flex !important;
+    }
+}
 @media only screen and (max-width: 400px){
     .homeSection .homeContent h1{
         font-size: 35px;
