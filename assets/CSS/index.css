@@ -45,7 +45,7 @@ body,input,textarea,button{
     z-index: 99;
     transition: 0.5s ease;
 }
-.header .fixed{
+.header.fixed{
     background-color: black;
     position: fixed;
 }
