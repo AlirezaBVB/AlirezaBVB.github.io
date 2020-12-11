@@ -1,3 +1,7 @@
+//Loader
+$(window).on("load",function(){
+  $(".preloader").addClass("loaded");
+})
 //FIXED HEADER
 $(document).ready(function(){
   $(window).scroll(function(){
@@ -38,4 +42,10 @@ $(document).ready(function(){
     $(".navToggle").click(function(){
       $(".header .nav").slideToggle()
     })
+    $(".header .nav a").click(function(){
+      if($(window).width()<700){
+        $(".header .nav").slideToggle();
+      }
+    })
   })
+  
