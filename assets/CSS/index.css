@@ -620,8 +620,7 @@ body,input,textarea,button{
         display: block!important;
     }
 } */
-
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 992px){
     .navToggle{
         display: flex !important;
     }
