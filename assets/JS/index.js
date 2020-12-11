@@ -33,3 +33,9 @@ $(document).ready(function(){
       } // End if
     });
   });
+  $(document).ready(function(){
+    //nav toggle
+    $(".navToggle").click(function(){
+      $(".header .nav").slideToggle()
+    })
+  })
